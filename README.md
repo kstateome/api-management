@@ -19,15 +19,15 @@ The API Manager keeps track of API keys and tracks of the usage.  Each call can 
 Usage
 =====
 
-Method Helpers::
+Method Helpers
 
 	key_exists(dictionary) - Checks for a key.  Returns true if key exists or false is not
 	
 			dictionary is {'key': key}
 	
 	key_check(dictionary) - Makes sure key is correct.  If key is valid returns True
-	
-Example::
+		
+Example
 
 
 	attrs = self.flatten_dict(request.PUT)
@@ -55,3 +55,29 @@ Logging Helper
 Example
 
 	log_use(request.GET.get('key'), 'Audience', audience.id, 'updated')
+	
+	
+Error Reporting
+
+	key_required_error()
+	    
+	    - Error for api required
+	
+	def key_incorrect_error()
+	    
+	    - Error for api incorrect.
+	    
+	
+CSRF Exempt Method
+==================
+
+This library also inlcudes a work around for Django 1.3 CSRF protection for Piston.  Extend your resource to use it instead and you should have no problem running into CSRF errors when posting data.
+
+
+Method
+
+	CsrfExemptResource(Resource)
+	
+Example
+
+	CsrfExemptResource(ScholarshipsHandler)
