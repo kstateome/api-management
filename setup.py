@@ -5,7 +5,7 @@ version = '0.1'
 setup(name='api-management',
       version=version,
       description="Utilities for K-State APIs",
-      long_description=open("./README.txt", "r").read(),
+      long_description=open("./README.md", "r").read(),
       classifiers=[
           "Development Status :: 5 - Production/Stable",
           "Environment :: Console",
