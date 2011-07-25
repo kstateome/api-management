@@ -48,8 +48,10 @@ Example::
 	            
 
 Logging Helper
+
 	log_use(key, object being manipulated as string, id of object, action as string)
 	
 	
 Example
+
 	log_use(request.GET.get('key'), 'Audience', audience.id, 'updated')
