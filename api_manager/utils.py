@@ -23,12 +23,14 @@ def key_exists(attrs):
         return True
 
 def key_check(attrs):
-    keys = Keys.objects.active()
-    for key in keys:
-        if attrs['key'] == key.key:
-            return True
-    else:
-        return False
+	try:
+		key = Keys.objects.get(key=attrs['key'])
+	except Keys.DoesNotExist:
+		return False
+	if key.active:
+		return True
+	else:
+		return False
 
 def log_use(key, str_object, object_id, action):
     key = Keys.objects.get(key=key)
