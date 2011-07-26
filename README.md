@@ -1,4 +1,4 @@
-K-State API Mangager
+API Mangager
 ====================
 
 
