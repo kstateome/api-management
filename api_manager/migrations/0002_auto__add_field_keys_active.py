@@ -9,24 +9,24 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         
         # Adding field 'Keys.active'
-        db.add_column('api_management_keys', 'active', self.gf('django.db.models.fields.BooleanField')(default=False, blank=True), keep_default=False)
+        db.add_column('api_manager_keys', 'active', self.gf('django.db.models.fields.BooleanField')(default=False, blank=True), keep_default=False)
     
     
     def backwards(self, orm):
         
         # Deleting field 'Keys.active'
-        db.delete_column('api_management_keys', 'active')
+        db.delete_column('api_manager_keys', 'active')
     
     
     models = {
-        'api_management.keys': {
+        'api_manager.keys': {
             'Meta': {'object_name': 'Keys'},
             'active': ('django.db.models.fields.BooleanField', [], {'default': 'False', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'key': ('django.db.models.fields.CharField', [], {'max_length': '250'}),
             'key_user': ('django.db.models.fields.CharField', [], {'max_length': '250'})
         },
-        'api_management.keyusage': {
+        'api_manager.keyusage': {
             'Meta': {'object_name': 'KeyUsage'},
             'date': ('django.db.models.fields.DateField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -35,4 +35,4 @@ class Migration(SchemaMigration):
         }
     }
     
-    complete_apps = ['api_management']
+    complete_apps = ['api_manager']

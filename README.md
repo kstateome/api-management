@@ -14,7 +14,7 @@ Change Log
 * [Jul 25 2011] - Release
 * [Jul 26 2011] - Changed loop to a .get()
 * [Jul 26 2011] - Released 0.1.1
-
+* [Jul 27 2011] - Fix db issue.
 
 
 What Tools are Included
