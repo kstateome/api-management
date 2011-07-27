@@ -30,7 +30,7 @@ class Migration(SchemaMigration):
             'Meta': {'object_name': 'KeyUsage'},
             'date': ('django.db.models.fields.DateField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'key': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['api_management.Keys']"}),
+            'key': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['api_manager.Keys']"}),
             'object_changed': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         }
     }

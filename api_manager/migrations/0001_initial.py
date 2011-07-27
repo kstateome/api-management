@@ -21,7 +21,7 @@ class Migration(SchemaMigration):
             ('date', self.gf('django.db.models.fields.DateField')()),
             ('object_changed', self.gf('django.db.models.fields.CharField')(max_length=100)),
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('key', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['api_management.Keys'])),
+            ('key', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['api_manager.Keys'])),
         ))
         db.send_create_signal('api_manager', ['KeyUsage'])
     
@@ -46,7 +46,7 @@ class Migration(SchemaMigration):
             'Meta': {'object_name': 'KeyUsage'},
             'date': ('django.db.models.fields.DateField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'key': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['api_management.Keys']"}),
+            'key': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['api_manager.Keys']"}),
             'object_changed': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         }
     }
