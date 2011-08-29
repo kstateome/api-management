@@ -1,6 +1,6 @@
 from setuptools import setup
 
-version = '0.1.4'
+version = '0.1.4.1'
 
 setup(name='api-management',
       version=version,
