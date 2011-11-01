@@ -1,6 +1,6 @@
 from setuptools import setup
 
-version = '0.1.4'
+version = '0.1.4.1'
 
 setup(name='api-management',
       version=version,
@@ -23,7 +23,7 @@ setup(name='api-management',
       url='http://github.com/kstateome/api-management',
       license='MIT',
       packages=['api_manager', 'api_manager.migrations'],
-      install_requires = ['django-piston', 'django==1.3', 'south'],
+      install_requires = ['django==1.3', 'south'],
       include_package_data=True,
       zip_safe=True,
       )

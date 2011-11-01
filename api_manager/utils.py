@@ -34,7 +34,7 @@ def key_check(attrs):
 
 def log_use(key, str_object, object_id, action):
     key = Keys.objects.get(key=key)
-    usage_log = KeyUsage(key=key, log_message='%s - ID %d was %s' % (str_object, object_id, action,))
+    usage_log = KeyUsage(key=key, log_message='%s - ID %s was %s' % (str_object, object_id, action,))
     usage_log.save()
     return True
     
